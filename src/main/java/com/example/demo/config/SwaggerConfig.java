@@ -18,7 +18,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     @Bean
     public Docket api() {
-        Server testServer = new Server("Server", "https://yunsboard.dev", "tilko", Collections.emptyList(), Collections.emptyList());
+        Server testServer = new Server("Server", "https://yunsboard.dev", "test", Collections.emptyList(), Collections.emptyList());
         Server serverLocal = new Server("local server", "http://localhost:1001", "for local usages", Collections.emptyList(), Collections.emptyList());
         return new Docket(DocumentationType.OAS_30)
                 .servers(testServer, serverLocal)

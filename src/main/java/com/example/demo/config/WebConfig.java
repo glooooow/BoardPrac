@@ -23,6 +23,7 @@ public class WebConfig {
             return cors;
                 });
         http.csrf().disable();
+        /* 아직 인증,인가가 필요없으므로 주석처리 */
 //                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 //                .and()
 //                .authorizeRequests()

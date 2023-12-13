@@ -32,8 +32,8 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     public ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring-Boot Rest API Details")
-                .description("Yun's Board")
+                .title("Yun's Board")
+                .description("Spring-Boot Rest API Details")
                 .version("1.0")
                 .build();
     }

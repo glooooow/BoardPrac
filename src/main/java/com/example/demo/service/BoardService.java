@@ -27,14 +27,14 @@ public class BoardService {
             AllBoardResponseDto allBoardResponseDto = new AllBoardResponseDto(board);
             allBoardlist.add(allBoardResponseDto);
         }
-        return ResponseDto.sucess(allBoardlist);
+        return ResponseDto.success(allBoardlist);
     }
 
     public ResponseDto<BoardResponseDto> createBoard(BoardRequestDto boardRequestDto) {
         Board board = new Board(boardRequestDto);
         boardRepository.save(board);
         BoardResponseDto boardResponseDto = new BoardResponseDto(board);
-        return ResponseDto.sucess(boardResponseDto);
+        return ResponseDto.success(boardResponseDto);
     }
 
     public ResponseDto<BoardResponseDto> getBoardById(Long id) {
@@ -43,7 +43,7 @@ public class BoardService {
             return  ResponseDto.fail(ErrorCode.Not_Exist_Board);
         } else {
             BoardResponseDto boardResponseDto = new BoardResponseDto(board);
-            return ResponseDto.sucess(boardResponseDto);
+            return ResponseDto.success(boardResponseDto);
         }
     }
 
